@@ -1,0 +1,39 @@
+package app.hangboard.workout;
+
+import java.util.List;
+
+/**
+ * A single hangboard workout
+ * Created by kira on 9/30/17.
+ */
+
+public class Workout {
+
+    private Double betweenRest;
+    private Double longRest;
+    private List<Hang> hangs;
+
+    public Double getBetweenRest() {
+        return betweenRest;
+    }
+
+    public void setBetweenRest(Double betweenRest) {
+        this.betweenRest = betweenRest;
+    }
+
+    public Double getLongRest() {
+        return longRest;
+    }
+
+    public void setLongRest(Double longRest) {
+        this.longRest = longRest;
+    }
+
+    public List<Hang> getHangs() {
+        return hangs;
+    }
+
+    public void setHangs(List<Hang> hangs) {
+        this.hangs = hangs;
+    }
+}
