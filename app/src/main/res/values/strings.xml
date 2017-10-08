@@ -1,6 +1,27 @@
 <resources>
     <string name="app_name">Hang tight</string>
+
+    <!-- Navigation -->
+    <string name="title_stats">Stats</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Settings</string>
+
+    <!-- Workout -->
+    <string name="hang">Hang</string>
+    <string name="rest">Rest</string>
+    <string name="long_rest">Long Rest</string>
+    <string name="exercises">Exercises</string>
+    <string name="reps">Reps</string>
+
+    <!-- Dialog -->
+    <string name="exit">Exit</string>
+    <string name="done">Done</string>
+    <string name="new_exercise">New Exercise</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_list_workout">ListWorkoutActivity</string>
+    <string name="action_settings">Settings</string>
+
+
 </resources>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="app.hangboard.WorkoutActivity">
+    tools:context="app.hangboard.acitivities.WorkoutActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/content"
@@ -18,15 +18,15 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="saveWorkout"
+            android:onClick="createWorkout"
             android:text="Start"
-            app:layout_constraintLeft_toRightOf="@+id/editText"
+            app:layout_constraintLeft_toRightOf="@+id/reps"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editText"
+            app:layout_constraintTop_toTopOf="@+id/reps"
             tools:layout_constraintTop_creator="1" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/reps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"

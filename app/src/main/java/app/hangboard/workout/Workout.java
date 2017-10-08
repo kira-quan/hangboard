@@ -1,5 +1,6 @@
 package app.hangboard.workout;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,5 +36,13 @@ public class Workout {
 
     public void setHangs(List<Hang> hangs) {
         this.hangs = hangs;
+    }
+
+    public void addHang(Hang hang) {
+        if (hangs == null) {
+            hangs = new ArrayList<>();
+        }
+
+        hangs.add(hang);
     }
 }
