@@ -5,7 +5,11 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 import app.hangboard.R;
 import app.hangboard.dialog.CreateExerciseDialog;
@@ -21,11 +25,23 @@ public class CreateWorkoutActivity extends FragmentActivity
 
     private Workout workout;
 
+    //DEFINING AN ADAPTER WHICH WILL HANDLE THE DATA OF THE LISTVIEW
+    ArrayAdapter<Hang> adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_workout);
         workout = new Workout();
+
+        // Set up the list
+        ListView list = findViewById(R.id.listView);
+        adapter=new ArrayAdapter<Hang>(this,
+                android.R.layout.simple_list_item_1,
+                workout.getHangs());
+
+        list.setAdapter(adapter);
+
     }
 
     /**
@@ -36,22 +52,6 @@ public class CreateWorkoutActivity extends FragmentActivity
 
 
 //        Intent intent = new Intent(this, ConfirmWorkoutActivity.class);
-//
-//        EditText repsText = (EditText) findViewById(R.id.reps);
-//        String reps = repsText.getText().toString();
-//
-//        EditText durationText = (EditText) findViewById(R.id.duration);
-//        String duration = durationText.getText().toString();
-//
-//        EditText restText = (EditText) findViewById(R.id.rest);
-//        String rest = restText.getText().toString();
-//
-//        Hang hang = new Hang();
-//        hang.setLength(Double.parseDouble(duration));
-//        hang.setRest(Double.parseDouble(rest));
-//        hang.setRepetitions(Integer.parseInt(reps));
-//
-//
 //        startActivity(intent);
 
         DialogFragment dialog = new CreateExerciseDialog();
@@ -60,9 +60,25 @@ public class CreateWorkoutActivity extends FragmentActivity
 
     public void onDialogPositiveClick(DialogFragment dialog) {
 
-        // Save exercise to the list
+
+        EditText repsText = dialog.getDialog().findViewById(R.id.reps);
+        String reps = repsText.getText().toString();
+
+        EditText durationText = dialog.getDialog().findViewById(R.id.duration);
+        String duration = durationText.getText().toString();
+
+        EditText restText = dialog.getDialog().findViewById(R.id.rest);
+        String rest = restText.getText().toString();
+
         Hang hang = new Hang();
+        hang.setLength(Integer.parseInt(duration));
+        hang.setRest(Integer.parseInt(rest));
+        hang.setRepetitions(Integer.parseInt(reps));
+
+        // Save exercise to the list
         workout.addHang(hang);
+
+        adapter.notifyDataSetChanged();
 
 
     }

@@ -2,37 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <EditText
         android:id="@+id/duration"
-        android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:layout_marginBottom="4dp"
-        android:hint="@string/hang" />
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:hint="@string/hang"
+        android:inputType="number" />
+
     <EditText
         android:id="@+id/rest"
-        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="sans-serif"
-        android:hint="@string/rest"/>
+        android:hint="@string/rest"
+        android:inputType="number" />
+
     <EditText
         android:id="@+id/reps"
-        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="sans-serif"
-        android:hint="@string/reps"/>
+        android:hint="@string/reps"
+        android:inputType="number" />
 
 </LinearLayout>

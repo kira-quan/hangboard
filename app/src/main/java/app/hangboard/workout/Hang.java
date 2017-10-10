@@ -8,9 +8,9 @@ package app.hangboard.workout;
 public class Hang {
 
     private Integer repetitions;
-    private Double length;
+    private Integer length;
     private Integer sequence;
-    private Double rest;
+    private Integer rest;
 
     public Integer getRepetitions() {
         return repetitions;
@@ -20,11 +20,11 @@ public class Hang {
         this.repetitions = repetitions;
     }
 
-    public Double getLength() {
+    public Integer getLength() {
         return length;
     }
 
-    public void setLength(Double length) {
+    public void setLength(Integer length) {
         this.length = length;
     }
 
@@ -36,11 +36,21 @@ public class Hang {
         this.sequence = sequence;
     }
 
-    public Double getRest() {
+    public Integer getRest() {
         return rest;
     }
 
-    public void setRest(Double rest) {
+    public void setRest(Integer rest) {
         this.rest = rest;
+    }
+
+    @Override
+    public String toString() {
+        return "Hang{" +
+                "repetitions=" + repetitions +
+                ", length=" + length +
+                ", sequence=" + sequence +
+                ", rest=" + rest +
+                '}';
     }
 }

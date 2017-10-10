@@ -31,6 +31,8 @@ public class Workout {
     }
 
     public List<Hang> getHangs() {
+        if (hangs == null)
+            hangs = new ArrayList<>();
         return hangs;
     }
 
