@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/exercise_seq"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="EX"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp" />
+    <TextView
+        android:id="@+id/duration_header"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Hang"
+        android:textColor="@color/white"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toRightOf="@+id/exercise_seq" />
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="50dp"
+        android:text=":05"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toRightOf="@+id/duration_header"
+        android:layout_marginLeft="8dp" />
+    <TextView
+        android:id="@+id/reps_header"
+        android:layout_width="50dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="Reps"
+        app:layout_constraintLeft_toRightOf="@+id/duration"
+        android:layout_marginLeft="29dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:id="@+id/reps"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+        android:text="3"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/reps_header"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:id="@+id/rest_header"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Rest"
+        android:textColor="@color/white"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/reps_header"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toRightOf="@+id/exercise_seq" />
+
+    <TextView
+        android:id="@+id/rest"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text=":05"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/rest_header"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="25dp"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintTop_toBottomOf="@+id/reps_header" />
+</android.support.constraint.ConstraintLayout>

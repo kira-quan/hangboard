@@ -12,6 +12,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import app.hangboard.R;
+import app.hangboard.adapter.ExerciseRowAdapter;
 import app.hangboard.dialog.CreateExerciseDialog;
 import app.hangboard.workout.Hang;
 import app.hangboard.workout.Workout;
@@ -36,8 +37,7 @@ public class CreateWorkoutActivity extends FragmentActivity
 
         // Set up the list
         ListView list = findViewById(R.id.listView);
-        adapter=new ArrayAdapter<Hang>(this,
-                android.R.layout.simple_list_item_1,
+        adapter=new ExerciseRowAdapter<Hang>(this, R.layout.exercise_row,
                 workout.getHangs());
 
         list.setAdapter(adapter);
