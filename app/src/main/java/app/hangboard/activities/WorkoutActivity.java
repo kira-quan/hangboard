@@ -1,4 +1,4 @@
-package app.hangboard.acitivities;
+package app.hangboard.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import app.hangboard.R;
+
+import static java.security.AccessController.getContext;
 
 public class WorkoutActivity extends AppCompatActivity {
 
@@ -32,19 +34,20 @@ public class WorkoutActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_stats:
-//                    mTextMessage.setText(R.string.title_stats);
                     return true;
                 case R.id.navigation_home:
-//                    mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_settings:
-//                    mTextMessage.setText(R.string.title_settings);
+                    Intent intent = new Intent(WorkoutActivity.this, SettingsActivity.class);
+                    startActivity(intent);
                     return true;
             }
             return false;
         }
 
     };
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

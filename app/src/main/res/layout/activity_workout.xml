@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="app.hangboard.acitivities.WorkoutActivity">
+    tools:context="app.hangboard.activities.WorkoutActivity">
 
     <include
         android:id="@+id/header_include"

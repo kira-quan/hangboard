@@ -18,10 +18,20 @@
     <string name="done">Done</string>
     <string name="new_exercise">New Exercise</string>
 
+    <!-- Profile Settings -->
+    <string name="enter_name">Enter Profile Name</string>
+    <string name="enter_age">Enter Age</string>
+    <string name="enter_weight">Enter Weight</string>
+    <string name="enter_feet">Feet</string>
+    <string name="enter_inches">Inches</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_list_workout">ListWorkoutActivity</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 
 </resources>

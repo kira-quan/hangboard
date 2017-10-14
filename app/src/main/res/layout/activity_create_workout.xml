@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="app.hangboard.acitivities.CreateWorkoutActivity">
+    tools:context="app.hangboard.activities.CreateWorkoutActivity">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

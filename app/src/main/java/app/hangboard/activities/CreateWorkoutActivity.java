@@ -1,19 +1,14 @@
-package app.hangboard.acitivities;
+package app.hangboard.activities;
 
-import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 import app.hangboard.R;
 import app.hangboard.adapter.ExerciseRowAdapter;
@@ -35,25 +30,7 @@ public class CreateWorkoutActivity extends FragmentActivity
     private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_stats:
-//                    mTextMessage.setText(R.string.title_stats);
-                    return true;
-                case R.id.navigation_home:
-//                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_settings:
-//                    mTextMessage.setText(R.string.title_settings);
-                    return true;
-            }
-            return false;
-        }
-
-    };
+            = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

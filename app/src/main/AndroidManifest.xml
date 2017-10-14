@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".acitivities.WorkoutActivity"
+            android:name=".activities.WorkoutActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,20 +19,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".acitivities.ConfirmWorkoutActivity"
-            android:parentActivityName=".acitivities.WorkoutActivity">
+            android:name=".activities.ConfirmWorkoutActivity"
+            android:parentActivityName=".activities.WorkoutActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".acitivities.WorkoutActivity" />
+                android:value=".activities.WorkoutActivity" />
         </activity>
-        <activity android:name=".acitivities.CreateWorkoutActivity" />
-        <activity android:name=".acitivities.HangboardActivity" />
+        <activity android:name=".activities.CreateWorkoutActivity" />
+        <activity android:name=".activities.HangboardActivity" />
         <activity
-            android:name=".acitivities.ListWorkoutActivity"
+            android:name=".activities.ListWorkoutActivity"
             android:label="@string/title_activity_list_workout"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

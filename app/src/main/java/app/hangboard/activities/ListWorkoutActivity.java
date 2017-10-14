@@ -1,4 +1,4 @@
-package app.hangboard.acitivities;
+package app.hangboard.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
