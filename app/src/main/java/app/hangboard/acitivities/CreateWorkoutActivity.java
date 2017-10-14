@@ -40,14 +40,14 @@ public class CreateWorkoutActivity extends FragmentActivity
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
+                case R.id.navigation_stats:
+//                    mTextMessage.setText(R.string.title_stats);
+                    return true;
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_stats);
+//                    mTextMessage.setText(R.string.title_home);
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_settings);
+                case R.id.navigation_settings:
+//                    mTextMessage.setText(R.string.title_settings);
                     return true;
             }
             return false;

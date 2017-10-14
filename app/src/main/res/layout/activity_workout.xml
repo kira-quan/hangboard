@@ -8,6 +8,16 @@
     android:orientation="vertical"
     tools:context="app.hangboard.acitivities.WorkoutActivity">
 
+    <include
+        android:id="@+id/header_include"
+        layout="@layout/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="-3dp" />
+
     <android.support.constraint.ConstraintLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
