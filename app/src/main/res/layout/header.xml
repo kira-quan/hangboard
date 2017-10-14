@@ -7,11 +7,10 @@
     <TextView
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:gravity="center"
         android:text="New Workout"
         android:textColor="@color/white"
-        android:textSize="45sp"
         android:textStyle="bold"
         android:background="@color/colorHighlightDark"
         android:layout_marginLeft="0dp"
