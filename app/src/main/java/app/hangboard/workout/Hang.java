@@ -11,6 +11,7 @@ public class Hang {
     private Integer length;
     private Integer sequence;
     private Integer rest;
+    private Integer completedRepetitions = 0;
 
     public Integer getRepetitions() {
         return repetitions;
@@ -42,6 +43,14 @@ public class Hang {
 
     public void setRest(Integer rest) {
         this.rest = rest;
+    }
+
+    public Integer getCompletedRepetitions() {
+        return completedRepetitions;
+    }
+
+    public void setCompletedRepetitions(Integer completedRepetitions) {
+        this.completedRepetitions = completedRepetitions;
     }
 
     @Override

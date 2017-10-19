@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import app.hangboard.R;
+import app.hangboard.navigation.NavigationFragment;
 
 import static java.security.AccessController.getContext;
 
@@ -25,38 +26,12 @@ public class WorkoutActivity extends AppCompatActivity {
     private static final String PROFILE_WEIGHT = "profile_weight";
     private static final String PROFILE_AGE = "profile_age";
 
-    private TextView mTextMessage;
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_stats:
-                    return true;
-                case R.id.navigation_home:
-                    return true;
-                case R.id.navigation_settings:
-                    Intent intent = new Intent(WorkoutActivity.this, SettingsActivity.class);
-                    startActivity(intent);
-                    return true;
-            }
-            return false;
-        }
-
-    };
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout);
 
-        // Set up the navigation listener
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         // Set the profile name on the header
         SharedPreferences sharedPreferences = getPreferences(Context.MODE_PRIVATE);

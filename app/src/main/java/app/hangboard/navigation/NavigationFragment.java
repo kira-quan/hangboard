@@ -17,22 +17,9 @@ import app.hangboard.activities.SettingsActivity;
 import app.hangboard.activities.WorkoutActivity;
 
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link NavigationFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link NavigationFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Bottom Navigation Fragment
  */
 public class NavigationFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
@@ -41,13 +28,16 @@ public class NavigationFragment extends Fragment {
 
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent;
                 switch (item.getItemId()) {
                     case R.id.navigation_stats:
                         return true;
                     case R.id.navigation_home:
+                        intent = new Intent(getContext(), WorkoutActivity.class);
+                        startActivity(intent);
                         return true;
                     case R.id.navigation_settings:
-                        Intent intent = new Intent(getContext(), SettingsActivity.class);
+                        intent = new Intent(getContext(), SettingsActivity.class);
                         startActivity(intent);
                         return true;
                 }
@@ -61,56 +51,35 @@ public class NavigationFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment NavigationFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static NavigationFragment newInstance(String param1, String param2) {
-        NavigationFragment fragment = new NavigationFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Set up the navigation listener
-        BottomNavigationView navigation = (BottomNavigationView) getActivity().findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_navigation, container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_navigation, container, false);
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
+        // Set up the navigation listener
+        BottomNavigationView navigation = view.findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        return view;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
     }
 
     @Override
