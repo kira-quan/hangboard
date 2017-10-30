@@ -12,6 +12,8 @@
     <string name="long_rest">Long Rest</string>
     <string name="exercises">Exercises</string>
     <string name="reps">Reps</string>
+    <string name="hangboard">Hangboard:</string>
+    <string name="no_hangboard">No Board Selected</string>
 
     <!-- Dialog -->
     <string name="exit">Exit</string>

@@ -42,9 +42,10 @@ public class ExerciseRowAdapter<T> extends ArrayAdapter<T> {
         Hang hang = (Hang) getItem(position);
 
         if (hang != null) {
-            TextView reps = (TextView) v.findViewById(R.id.reps);
-            TextView duration = (TextView) v.findViewById(R.id.duration);
-            TextView rest = (TextView) v.findViewById(R.id.rest);
+            TextView reps =  v.findViewById(R.id.reps);
+            TextView duration =  v.findViewById(R.id.duration);
+            TextView rest = v.findViewById(R.id.rest);
+            TextView exerciseNumber = v.findViewById(R.id.exercise_seq);
 
             if (reps != null) {
                 reps.setText(hang.getRepetitions().toString());
@@ -57,6 +58,8 @@ public class ExerciseRowAdapter<T> extends ArrayAdapter<T> {
             if (rest != null) {
                 rest.setText(String.format(":%02d", hang.getRest()));
             }
+
+            exerciseNumber.setText("EX\n"+ (position + 1));
         }
 
         return v;
