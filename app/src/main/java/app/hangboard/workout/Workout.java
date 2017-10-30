@@ -13,6 +13,15 @@ public class Workout {
     private Double betweenRest;
     private Double longRest;
     private List<Hang> hangs;
+    private String workoutName;
+
+    public String getWorkoutName() {
+        return workoutName;
+    }
+
+    public void setWorkoutName(String workoutName) {
+        this.workoutName = workoutName;
+    }
 
     public Double getBetweenRest() {
         return betweenRest;

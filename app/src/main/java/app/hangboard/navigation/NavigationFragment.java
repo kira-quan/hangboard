@@ -21,8 +21,6 @@ import app.hangboard.activities.WorkoutActivity;
  */
 public class NavigationFragment extends Fragment {
 
-    private OnFragmentInteractionListener mListener;
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -74,6 +72,7 @@ public class NavigationFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        // TODO: Determine whether this is needed or not
 //        if (context instanceof OnFragmentInteractionListener) {
 //            mListener = (OnFragmentInteractionListener) context;
 //        } else {
@@ -85,7 +84,7 @@ public class NavigationFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
+        mOnNavigationItemSelectedListener = null;
     }
 
     /**
