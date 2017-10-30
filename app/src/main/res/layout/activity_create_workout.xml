@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
@@ -9,53 +9,47 @@
     android:orientation="vertical"
     tools:context="app.hangboard.activities.CreateWorkoutActivity">
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
+    <include
+        android:id="@+id/header_include"
+        layout="@layout/header"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="-3dp" />
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/navigation">
 
-        <include
-            android:id="@+id/header_include"
-            layout="@layout/header"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteY="-3dp" />
+    <Button
+        android:id="@+id/submitWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-38dp"
+        android:onClick="createWorkout"
+        android:text="Add"
+        android:layout_gravity="center_horizontal"
+        />
 
-        <Button
-            android:id="@+id/submitWorkout"
+    <ListView
+            android:id="@+id/listView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:onClick="createWorkout"
-            android:text="Add"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/header_include" />
-
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="350dp"
-            android:layout_height="495dp"
             android:layout_marginTop="40dp"
             android:divider="@android:color/transparent"
             android:dividerHeight="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submitWorkout" />
-    </android.support.constraint.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@+id/submitWorkout"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <fragment android:name="app.hangboard.navigation.NavigationFragment"
+        android:id="@+id/navigation_fragment"
+        android:layout_weight="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
 
 
-</RelativeLayout>
+
+</LinearLayout>
