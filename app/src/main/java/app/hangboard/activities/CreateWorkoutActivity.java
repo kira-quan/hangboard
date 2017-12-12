@@ -63,6 +63,7 @@ public class CreateWorkoutActivity extends FragmentActivity
 
         DialogFragment dialog = new CreateExerciseDialog();
         dialog.show(getSupportFragmentManager(), "CreateExerciseDialog");
+
     }
 
     public void onDialogPositiveClick(DialogFragment dialog) {

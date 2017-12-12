@@ -26,6 +26,7 @@
     <string name="enter_weight">Enter Weight</string>
     <string name="enter_feet">Feet</string>
     <string name="enter_inches">Inches</string>
+    <string name="stats_info">This will help track your stats in the future</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
